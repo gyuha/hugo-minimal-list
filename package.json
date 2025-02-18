@@ -1,0 +1,22 @@
+{
+  "name": "hugo-minimal-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev-hugo": "hugo server -s exampleSite --gc --themesDir=../..",
+    "dev-tailwind": "npx tailwindcss -i assets/css/main.css -o assets/css/index.css --watch",
+    "dev": "run-p dev-hugo dev-tailwind"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.5.1",
+    "prettier-plugin-go-template": "^0.0.15",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^3.4.1"
+  }
+}

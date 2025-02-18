@@ -1,2 +1,7 @@
-# hugo-minimal-list
-Hugo Minima list Theme...
+# Theme Name
+
+## Features
+
+## Installation
+
+## Configuration
