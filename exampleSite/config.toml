@@ -1,6 +1,6 @@
-baseURL = "https://gyuha.com/"
+baseURL = "https://example.com/"
 languageCode = "ko-KR"
-title = "신규하 블로그"
+title = "Example Site"
 theme = "hugo-minimal-list"
 
 DefaultContentLanguage = "kr"
