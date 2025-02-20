@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 신규하 블로그</title>
+    <title>Posts on Paper</title>
     <link>http://localhost:1313/post/</link>
-    <description>Recent content in Posts on 신규하 블로그</description>
+    <description>Recent content in Posts on Paper</description>
     <generator>Hugo</generator>
-    <language>ko-KR</language>
+    <language>en</language>
+    <copyright>© 2024, lee.so</copyright>
+    <lastBuildDate></lastBuildDate>
     <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

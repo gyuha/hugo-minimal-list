@@ -1,22 +1,24 @@
 {
-  "name": "hugo-minimal-list",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "hugo-paper",
+  "version": "6.28.0",
+  "repository": "https://github.com/nanxiaobei/hugo-paper.git",
+  "author": "nanxiaobei <nanxiaobei@gmail.com>",
+  "license": "MIT",
   "scripts": {
+    "__FOR_DEV__": "To dev on mobile, change all `192.168.0.101` to your local IP",
     "dev-hugo": "hugo server -s exampleSite --gc --themesDir=../..",
-    "dev-tailwind": "npx tailwindcss -i assets/css/main.css -o assets/css/index.css --watch",
-    "dev": "run-p dev-hugo dev-tailwind"
+    "dev:tailwind": "pnpm tailwindcss -i ./assets/app.css -o ./assets/main.css --watch",
+    "dev:server": "hugo server --buildDrafts --watch --minify --disableFastRender --themesDir=../.. --source=exampleSite --baseURL=192.168.0.101 --bind=192.168.0.101 --port=1313",
+    "dev:open": "open http://192.168.0.101:1313/",
+    "build:go": "cp exampleSite/go.default.mod exampleSite/go.mod",
+    "build:generate": "hugo --gc --minify --themesDir=../.. --source=exampleSite --config=go.toml,config.toml",
+    "dev": "killall hugo & pnpm dev:tailwind & pnpm dev:server & pnpm dev:open",
+    "build": "pnpm build:go & pnpm build:generate"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.16",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^3.5.1",
-    "prettier-plugin-go-template": "^0.0.15",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^3.4.1"
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "prettier": "^3.4.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "tailwindcss": "^3.4.16"
   }
 }

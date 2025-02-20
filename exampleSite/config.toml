@@ -1,38 +1,80 @@
-baseURL = "https://example.com/"
-languageCode = "ko-KR"
-title = "Example Site"
+baseURL = "https://hugo-paper.vercel.app/"
+# title = "Hugo Themes"
+author = "Steve Francia"
+copyright = "© 2024, lee.so"
+paginate = 3
+languageCode = "en"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
+# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
+ignoreErrors = ["error-remote-getjson"]
+
+# ------------------------------
 theme = "hugo-minimal-list"
+title = "Paper"
 
-DefaultContentLanguage = "kr"
-metaDataFormat = "yaml"
-disqusShortname = "gyuha-blog"
-googleAnalytics = "UA-128878421-1"
-paginate = 7
+[params]
+  color = 'linen'
 
+  twitter = 'nanxiaobei'
+  github = 'nanxiaobei'
+  instagram = 'nan.xiaobei'
 
-[Params]
-  description = "Gyuha blog"
-  subtitle = "개발 기록 보관소"
-  logo = "/img/logo-title.png"
-  favicon = "/favicon.ico"
-  comments = true
-  
-[pygmentsOptions]
-  linenos = "table"
-  pygmentsOptions = "table"
+avatar = 'nanxiaobei@gmail.com'
+  name = 'Lee'
+  bio = 'Discover fresh context'
+# ------------------------------
 
-[Author]
-  name = "신규하"
-  website = "https://gyuha.com"
-
+# needed to  render raw HTML (e.g. <sub>, <sup>, <kbd>, <mark>)
 [markup]
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    noClasses = true
-    style = "fruity"
-    tabWidth = 2
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+#  [markup.highlight]
+#    lineNos = true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 10
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[privacy]
+
+  [privacy.vimeo]
+    disabled = false
+    simple = true
+
+  [privacy.twitter]
+    disabled = false
+    enableDNT = true
+    simple = true
+
+  [privacy.instagram]
+    disabled = false
+    simple = true
+
+  [privacy.youtube]
+    disabled = false
+    privacyEnhanced = true
+
+[services]
+
+  [services.instagram]
+    disableInlineCSS = true
+
+  [services.twitter]
+    disableInlineCSS = true
